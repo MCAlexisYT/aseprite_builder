@@ -20,6 +20,7 @@ jobs:
       latest_tag: ${{ steps.version_info.outputs.latest_tag }}
       should_build: ${{ steps.should_build.outputs.should_build }}
       upload_url: ${{ steps.create_release.outputs.upload_url }}
+    permissions: write-all
     steps:
     - name: Get latest version info
       id: version_info
